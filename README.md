@@ -2,7 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Init project:
+
+```bash
+npm install
+
+# create .env files and put code below
+NEXT_PUBLIC_API_URL=https://rickandmortyapi.com/api/
+```
+
+Run the development server:
 
 ```bash
 npm run dev
