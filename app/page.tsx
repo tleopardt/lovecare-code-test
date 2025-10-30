@@ -155,11 +155,23 @@ export default function Home() {
       </div>
 
       <ListCharacters data={data} lastItemRef={lastItemRef} />
-
+      
       {
         isLoad &&
           <div className="w-full !my-[40px] flex justify-center">
             <Loader />
+          </div>
+      }
+
+      {
+        !isLoad && data.length === 0 &&
+          <div className="w-full flex flex-col text-center items-center">
+            <SearchIcon width={40} height={40} />
+
+            <h1 className="!px-[5%] md:!px-[0] !mt-4">No Results Found</h1>
+            <p className="!px-[5%] md:!px-[0]">
+              No matching results. Try updating or resetting your filters.
+            </p>
           </div>
       }
 
